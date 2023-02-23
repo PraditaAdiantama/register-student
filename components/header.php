@@ -1,3 +1,23 @@
+<?php 
+$pageName = basename($_SERVER['PHP_SELF']);
+$headerText = '';
+
+switch ($pageName) {
+    case 'index.php':
+        $headerText = 'Simple CRUD';
+        break;
+    case 'edit-form.php':
+        $headerText = 'Edit Student';
+        break;
+    case 'list-student.php':
+        $headerText = 'All Registered Student';
+        break;
+    case 'register-form.php':
+        $headerText = 'Register Student';
+        break;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +53,6 @@
     <header class="border-b-2 mb-5 fixed w-full z-10">
         <div class="flex justify-between container-cstm py-5">
             <h1 class="font-semibold text-xl"><a href="../index.php">SMK Coding</a></h1>
-            <h3>Simple CRUD</h3>
+            <h3><?php echo $headerText ?></h3>
         </div>
     </header>
