@@ -15,7 +15,7 @@ if(isset($_POST['save'])){
     $query = mysqli_query($con, $sql);
 
     if( $query ) {
-        header('Location: ../pages/list-siswa.php');
+        header('Location: ../pages/list-student.php');
     } else {
         die("Failed to save change...");
     }
